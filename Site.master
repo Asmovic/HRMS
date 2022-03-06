@@ -1,0 +1,181 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.master.cs" Inherits="SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - My ASP.NET Application</title>
+    <link href="Content/HRSite.css" rel="stylesheet" />
+    <script type="text/javascript" src="Scripts/HRSite.js"></script>
+    <script src="Scripts/jquery-ui-1.12.1.js"></script>
+    <link href="Content/themes/base/jquery-ui.min.css" rel="stylesheet" />
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+    <webopt:bundlereference runat="server" path="~/Content/css" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+</head>
+<body>
+    <form runat="server">
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <%--To learn more about bundling scripts in ScriptManager see http://go.microsoft.com/fwlink/?LinkID=301884 --%>
+                <%--Framework Scripts--%>
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="bootstrap" />
+                <asp:ScriptReference Name="respond" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />
+                <%--Site Scripts--%>
+            </Scripts>
+        </asp:ScriptManager>
+
+
+         <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+
+                <div class="navbar-header">
+                     <a href="~/" id="header-logo"><img runat="server" class="navbar-brand" src="~/img/First_Logoo.jpg" style ="padding:2px 4px 1px 2px" /></a>
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                    <a class="navbar-brand" runat="server" href="~/"></a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a runat="server" href="~/">Home</a></li>
+                        <li><a runat="server" href="~/About">About</a></li>
+                        <li><a runat="server" href="~/Contact">Contact</a></li>
+                    <li class="dropdown" id="mad" runat="server">
+                            <a runat="server" href="~/Contact" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                                aria-expanded="false" id="admin">Admin<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a runat="server" href="~/hrpages/State.aspx">State Of Origin</a></li>
+                                <li><a runat="server" href="~/hrpages/LGA_Origin.aspx">Local Govt Of Origin</a></li>
+                                <li><a runat="server" href="~/hrpages/Department.aspx">Department</a></li>
+                                <li><a runat="server" href="~/hrpages/Section.aspx">Section</a></li>
+                                <li><a runat="server" href="~/hrpages/Designation.aspx">Designation</a></li>
+                                <li><a runat="server" href="~/hrpages/Grade.aspx">Grade Level</a></li>
+                                <li><a runat="server" href="~/hrpages/Category.aspx">Category</a></li>
+                                <li><a runat="server" href="~/hrpages/Role.aspx">Role</a></li>
+                                <li><a runat="server" href="~/hrpages/LeaveType.aspx">Leave Type</a></li>
+                                <li><a runat="server" href="~/hrpages/Tribe.aspx">Tribe</a></li>
+                                <li><a runat="server" href="~/hrpages/Location.aspx">Location</a></li>
+                                <li><a runat="server" href="~/hrpages/Qualification.aspx">Qualification</a></li>
+                                <li><a runat="server" href="~/hrpages/FieldOfStudy.aspx">Field of Study</a></li>
+                                <li><a runat="server" href="~/hrpages/Activities.aspx">Activities</a></li>
+                                <li><a runat="server" href="~/hrpages/PFA.aspx">PFA</a></li>
+                                <li><a runat="server" href="~/hrpages/TrainingType.aspx">Training Type</a></li>
+                                
+                            </ul>
+
+                   
+                        </li>
+
+                        
+                            <li class="dropdown" id="Li3" runat="server">
+                           <a runat="server" href="~/Contact" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                                aria-expanded="false" id="a3">Personnel Master<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                      <li><a runat="server" href="~/hrpages/StaffMaster.aspx">Staff Master</a></li>
+
+                            </ul>
+                              </li>
+
+                        
+
+                            <li class="dropdown" id="Li2" runat="server">
+                           <a runat="server" href="~/Contact" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                                aria-expanded="false" id="a2">Transactions<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                         <li><a runat="server" href="~/hrpages/QualificationTransaction.aspx">Qualification Transaction</a></li>
+                            <li><a runat="server" href="~/hrpages/LeaveRoaster.aspx">Leave Roaster</a></li>
+                                 <li><a runat="server" href="~/hrpages/LeaveAppr.aspx">Leave Approval</a></li>
+                                <li><a runat="server" href="~/hrpages/TransferRoaster.aspx">Transfer Roaster</a></li>
+                                 <li><a runat="server" href="~/hrpages/TransferAppr.aspx">Transfer Approval</a></li>
+                             <%--<li><a runat="server" href="~/hrpages/TrainingTransaction.aspx">Training Transaction</a></li>--%>
+                                 <li><a runat="server" href="~/hrpages/StaffPromotion.aspx">Promotion Transaction</a></li>
+                                <li><a runat="server" href="~/hrpages/PromotionAppr.aspx">Promotion Approval</a></li>
+                                <li><a runat="server" href="~/hrpages/TrainingNominationRoaster.aspx">Training Nomination Roaster</a></li>
+                                <li><a runat="server" href="~/hrpages/TrainingNominationRoasterAppr.aspx">Training Nomination Approval</a></li>
+                                <li><a runat="server" href="~/hrpages/TrainingTransactionRoaster.aspx">Training Transaction Roaster</a></li>
+                                <li><a runat="server" href="~/hrpages/TrainingTransactionAppr.aspx">Training Transaction Approval</a></li>
+                                <li><a runat="server" href="~/hrpages/ActivitiesTrans.aspx">Activities Transactions</a></li>
+                                <li><a runat="server" href="~/hrpages/Recruitment.aspx">Recruitment</a></li>
+                                <li><a runat="server" href="~/hrpages/EmploymentHistory.aspx">Employment History</a></li>
+
+                            </ul>
+                              </li>
+
+
+                        <li class="dropdown" id="Li1" runat="server">
+                           <a runat="server" href="~/Contact" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                                aria-expanded="false" id="a1">Report<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <%--<li><a runat="server" href="~/hrpages/PromoReport.aspx">Promotion Report</a></li>--%>
+                                <li><a runat="server" href="~/hrpages/TransferReport.aspx">Transfer Report</a></li>
+                                <li><a runat="server" href="~/hrpages/TrainingReport.aspx">Training Report</a></li>
+                                <li><a runat="server" href="~/hrpages/Qual_Report.aspx">Qualification Report</a></li>
+                                <li><a runat="server" href="~/hrpages/ReportOption.aspx">Staff Report</a></li>
+                                <li><a runat="server" href="~/hrpages/ReportOptionRet.aspx">Retirement Report</a></li>
+                                <li><a runat="server" href="~/hrpages/PromoOptRep.aspx">Promotion Report</a></li>
+                                <li><a runat="server" href="~/hrpages/ReportOptLeaveRoaster.aspx">Leave Roaster Report</a></li>
+                                <li><a runat="server" href="~/hrpages/ActOptRep.aspx">Activities Report</a></li>
+                                <li><a runat="server" href="~/hrpages/StaffAppraisalForm.aspx">Staff Appraisal</a></li>
+                                 
+                                
+
+                            </ul>
+                              </li>
+
+
+                        
+
+                    </ul>
+                    <asp:LoginView runat="server" ViewStateMode="Disabled">
+                        <AnonymousTemplate>
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><a runat="server" href="~/Account/Register">Sign Up</a></li>
+                                <li><a runat="server" href="~/Account/Login">Sign in</a></li>
+                            </ul>
+                        </AnonymousTemplate>
+                        <LoggedInTemplate>
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><a runat="server" href="~/Account/Manage" title="Manage your account">Hello, <%: Context.User.Identity.GetUserName()  %>!</a></li>
+                                <li>
+                                    <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" />
+                                </li>
+                            </ul>
+                        </LoggedInTemplate>
+                    </asp:LoginView>
+                </div>
+            </div>
+        </div>
+        <div class="container body-content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+            <hr />
+            <footer style="width:100%; height:20px">
+                 <a href="~/" id="footer"><img runat="server" class="navbar-brand" src="~/img/Footer.jpg" style ="padding:2px 4px 1px 2px; height:70px; width:80%; float:left" /></a>
+
+                <p style="padding-top:18px; float:left">&copy; <%: DateTime.Now.Year %> - Door Step Tech.</p>
+            </footer>
+
+        </div>
+    </form>
+</body>
+</html>

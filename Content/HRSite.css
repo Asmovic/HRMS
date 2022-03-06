@@ -1,0 +1,38 @@
+﻿body {
+
+    
+}
+
+
+ table,th,td
+{
+    width: 40%;
+    border-collapse: collapse;
+    border: 3px solid black;
+}
+
+        
+         tr:nth-child(even) {
+             background-color: white;
+         }
+         tr:nth-child(odd) {
+             background-color: aliceblue;
+         }
+
+        
+        
+        th {
+            background-color:#05c4ad;
+            color:white;
+            border-color:black;
+        }
+
+           td,th {
+             text-align:center;
+             padding:2px;
+         }
+         tr:hover{
+             color:hotpink;
+         }
+
+
